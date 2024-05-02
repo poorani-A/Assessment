@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+
+
+        /* Table with fixed layout */
+        .table-fixed {
+            table-layout: fixed;
+            width: 100%;
+
+        }
+
+        /* Table with auto layout */
+        .table-auto {
+            table-layout: auto;
+            width: 100%;
+        }
+        .tab1{
+            background-color: aquamarine;
+            width: 100%;
+            height: 80%;
+        }
+
+        /*2. Create a list and change its list-style-type: */
+        .circle {
+            list-style-type: circle;
+            font-size:30px;
+            color:brown
+        }
+
+        /* List with square bullet */
+        .square {
+            list-style-type: square;
+            font-size: 30px;
+            color: blueviolet;
+        }
+          /* List with circle bullet */
+        .circle {
+            list-style-type: circle;
+        }
+
+        /* List with square bullet */
+        .square {
+            list-style-type: square;
+        }
+
+         /* 2-column grid */
+         .grid-2 {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 3px;
+        }
+
+        /* 3-column grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap:2px;
+        }
+        .grid-1{
+
+            background-color: rgb(180, 180, 237);
+            font-size: 20px;
+            font-family: Georgia;
+        }
+        
+        /* Create a hero image: */
+        .hero-image {
+            background-image: url('nature.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            color: rgb(255, 254, 254);
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+        }
+        
+        /* Viewport for Grid: */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            background-color: rgb(45, 4, 4);
+           height: 100px;
+            color: aliceblue;
+            padding: 50px;
+        }
+        .grid a:hover{
+            font-size: 20px;
+        }
+
+        /* Media Queries: */
+
+        body {
+            font-size: 16px;
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+     <!--Create a table and apply table-layout as fixed and none: -->
+    <div class="tab1">
+    <h2>Table with Fixed Layout</h2>
+    <table class="table-fixed" border="1">
+        <colgroup>
+            <col style="width: 20%;">
+            <col style="width: 30%;">
+            <col style="width: 40%;">
+        </colgroup>
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+            
+        </tr>
+    </table>
+
+    <h2>Table with Auto Layout</h2>
+    <table class="table-auto" border="1">
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+    </table>
+</div>
+
+<!-- 2..Create a list and change its list-style-type: -->
+
+<h2>List with Circle Bullet</h2>
+    <ul class="circle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>List with Square Bullet</h2>
+    <ul class="square">
+        <li>C programming </li>
+        <li>java programming</li>
+        <li>php programming</li>
+    </ul>
+    
+    <!--3. Create a grid with different types: -->
+    <div class="grid-1">
+    <h2>2-column Grid</h2>
+    <div class="grid-2">
+        <div>Apple</div>
+        <div>Orange</div>
+        <div>Kiwi</div>
+        <div>Banana</div>
+        <div>Green Apple</div>
+        <div>Red Apple</div>
+        
+    </div>
+    <h2>3-column Grid</h2>
+    <div class="grid-3">
+        <div>Dogs</div>
+        <div>Cats</div>
+        <div>Puppy</div>
+        <div> lion</div>
+        <div>Tiger 3</div>
+        <div>Deer</div>
+        
+    </div>
+</div>
+
+<!-- Create a hero image: -->
+<div class="hero-image">
+    Hero Image
+</div>
+ <!-- Viewport for Grid: -->
+<div class="grid">
+    <a>HOME</a>
+    <a>SERVICES</a>
+    <a>PAGES</a>
+    <a>ABOUT US</a>
+    <a>CONTACT US</a>
+   
+    <!-- Add more items as needed -->
+</div>
+
+<!-- 4.Media Queries: -->
+<div class="fa">
+<p>This text has a default font size.</p>
+
+<img src="nature.jpg" alt="Image">
+
+<video width="320" height="240" controls>
+    <source src="nature.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</div>
+</body>
+</html>

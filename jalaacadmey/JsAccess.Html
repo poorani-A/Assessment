@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Disappear</title>
+    <style>
+        .hidden {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--1.. Write program using this keyword when we click on button, it should be disappear  -->
+    <button onclick="this.style.display = 'none'">Click to disappear</button>
+
+    <hr>
+
+    <h1>Counter</h1>
+
+    <p>Count: <span id="counter">0</span></p>
+    <button onclick="incrementCounter()">Count</button>
+    <hr>
+    <h1>Call method</h1>
+    <hr>
+
+
+    <script>
+
+    // 3..Write a program for COUNTER. Whenever we click on a "Count" button, value should increment
+        var count = 0;
+
+        function incrementCounter() {
+            count++;
+            document.getElementById("counter").innerText = count;
+        }
+
+    //2.Invoke a function using call() and apply(). Also Spot the difference between them.
+     function greet(name) {
+    document.write("\n");
+    document.writ("Hello \n",+name);
+
+    }
+     greet.call(null, "John");
+    function greet(name) {
+    
+    document.write('Hello \n' +name);
+}
+     document.write("<br>");
+    greet.apply(null, ["Jane"]);
+    document.write("<br>");
+
+    
+
+    
+        let counter = {
+    _count: 0,
+    get count() {
+        return this._count;
+
+        document.write("<br>");
+        
+    },
+    set count(value) {
+        this._count = value;
+        document.write("<br>");
+    },
+    increment() {
+        this._count++;
+        document.write("<br>");
+    }
+};
+
+document.write("<br>",counter.count ,); 
+document.write("<br>",counter.count); 
+counter.count = 10;
+document.write("<br>",counter.count); 
+
+//5. Adding properties to an existing function using object prototypes:
+
+function Person1(name) {
+    this.name = name;
+}
+
+Person1.prototype.sayHello = function() {
+    document.write("Hello, my name is  \n" + this.name);
+};
+
+let john = new Person1("John");
+john.sayHello(); 
+
+
+    </script>
+</body>
+</html>

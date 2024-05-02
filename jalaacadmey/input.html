@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+</head>
+<body>
+
+    <h1>This is Input Elements</h1>
+    <!-- Text input -->
+    <label for="text_input">Text Input:</label>
+    <input type="text" id="text_input" name="text_input" value="Text Value" size="30" maxlength="50" readonly>
+    <br><br>
+    <!-- Password input -->
+    <label for="password_input">Password Input:</label>
+    <input type="password" id="password_input" name="password_input" value="password123" size="30" maxlength="20" readonly>
+<br><br>
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+<br><br>
+    <!-- Reset button -->
+    <input type="reset" value="Reset">
+
+    <!-- Radio buttons -->
+    <br>
+    <fieldset>
+        <legend>Programming language</legend>
+        <label><input type="radio" name="radio_group" value="option1" checked> HTML</label><br>
+        <label><input type="radio" name="radio_group" value="option2"> CSS</label><br>
+        <label><input type="radio" name="radio_group" value="option3">JAVASCRIPT</label><br>
+    </fieldset>
+    <br><br>
+
+
+    <!-- Checkbox -->
+    <label><input type="checkbox" name="checkbox" value="checkbox_value" checked> Checkbox</label>
+<br><br>
+    <!-- Button -->
+    <button type="button" onclick="alert('Button clicked!')">Button</button>
+<br><br>
+    <!-- HTML5 input types -->
+    
+    <label for="number_input">Number Input:</label>
+    <input type="number" id="number_input" name="number_input" min="1" max="10" value="5">
+
+    <br><br>
+    <label for="range_input">Range Input:</label>
+    <input type="range" id="range_input" name="range_input" min="0" max="100" value="50">
+
+    <br><br>
+    <label for="color_input">Color Input:</label>
+    <input type="color" id="color_input" name="color_input" value="#ff0000">
+
+    <br><br>
+    <label for="date_input">Date Input:</label>
+    <input type="date" id="date_input" name="date_input" value="2024-04-30">
+
+    <br><br>
+    <label for="file_input">File Input:</label>
+    <input type="file" id="file_input" name="file_input">
+
+    <br><br>
+    <label for="time_input">Time Input:</label>
+    <input type="time" id="time_input" name="time_input" value="12:00">
+
+    <br><br>
+    <label for="month_input">Month Input:</label>
+    <input type="month" id="month_input" name="month_input" value="2024-04">
+
+    <br><br>
+    <label for="week_input">Week Input:</label>
+    <input type="week" id="week_input" name="week_input" value="2024-W18">
+
+    <br><br>
+    <label for="email_input">Email Input:</label>
+    <input type="email" id="email_input" name="email_input" required>
+
+    <!-- Form with target attribute -->
+    <br><br>
+    <form action="#" method="post" target="_blank">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Iframe -->
+    <br><br>
+    <iframe width="560" target="_self" height="315" src="https://www.youtube.com/embed/aGHVddspRq0?si=O930XvUHKeliagaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Marquee -->
+    <br><br>
+    <marquee behavior="scroll" direction="left">This is a marquee element</marquee>
+</body>
+</html>

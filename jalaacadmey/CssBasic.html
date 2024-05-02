@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Border and Hover</title>
+    <style>
+
+
+        /*1. to hover to change the color  */
+        table {
+            border: 2px solid black;
+            padding:20px;
+        }
+        .tab1{
+            align-items: center;
+        }
+        table:hover {
+            background-color: rgb(134, 179, 191);
+        }
+
+        /*2. display properties */
+        .hidden {
+            
+            border:2px solid black;
+            background-color: aqua;
+            width: 200px;
+            height:150px;
+            text-align: center;
+            padding-top: 50px;
+            margin-top: 10px;
+            
+        }
+        .visible {
+            visibility: visible;
+            border:2px solid red;
+            background-color: rgb(200, 191, 218);
+            width: 200px;
+            height:150px;
+            margin-top: 10px;
+        }
+        .collapsed {
+            visibility: collapse;
+            border:2px solid rgb(22, 7, 19);
+            background-color: rgb(81, 46, 152);
+            width: 100px;
+            height:100px;
+            margin-top: 10px;
+        }
+        .none {
+            display: none;
+            border:2px solid rgb(57, 5, 38);
+            background-color: rgb(81, 46, 152);
+            width: 200px;
+            height:200px;
+            margin-top: 10px;
+        }
+        .inline {
+            display: inline;
+            border:2px solid rgb(120, 33, 97);
+            background-color: rgb(196, 218, 124);
+            width: 100px;
+            height:100px;
+            margin-top: 10px;
+    
+        }
+        .block {
+            display: block;
+            border:2px solid rgb(16, 5, 50);
+            background-color: rgb(131, 215, 83);
+            width: 200px;
+            height:200;
+            margin-top: 10px;
+        }
+        .contents {
+            display: contents;
+            border:2px solid rgb(213, 167, 18);
+            background-color: rgb(81, 46, 152);
+            width: 200px;
+            height:200px;
+            margin-top: 10px;
+        }
+        .list-item {
+            display: list-item;
+            border:2px solid rgb(99, 246, 19);
+            background-color: rgb(215, 222, 223);
+            width: 200px;
+            height:200px;
+            margin-top: 10px;}
+
+            /*3. Long page with links to scroll to top and bottom: */
+            body{
+            height: 10px; /* To make the page long */
+        }
+        a {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid blue;
+            margin: 20px;
+            padding: 20px;
+        }
+        .small {
+            margin: 10px;
+            padding: 20px;
+            background-color: rgb(32, 243, 21);
+            border:2px dotted red;
+            width: 100px;
+            height: 150px;
+        }
+        .large {
+            margin: 40px;
+            padding: 40px;
+            background-color: rgb(230, 113, 175);
+            border:2px solid rgb(28, 26, 26);
+            width:200px ;
+        }
+       section{
+        background-image: url(dark.jpg), url(puppy.jpg);
+        background-position: right top, right left;
+       background-repeat: no-repeat, repeat;
+       height: 100px; height:60rem;
+        padding: 15px;
+
+
+       }
+
+       .page a{
+        border:2px solid red;
+        color: black;
+        height: 50px;
+        width:50px;
+        background-position:right top;
+
+        
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+        
+         <a href="csspagenation.html" target="_top">nextpage</a>
+        
+
+    </div>
+    <div class="tab1">
+        
+        <h1> Table Element hover to change the Color</h1>
+    <table>
+        <!-- <a class="page"   href="csspagenation.html" target="_top">next page</a> -->
+        <tr>
+            
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+</div>
+
+<div class="hidden">Hidden Div <p class="p1">This hidden property in dispaly </p></div>
+    <div class="visible">Visible <p class="p2">Hello HTML.....Hyper text markup languages</p></div>
+    <div class="collapsed">Collapsed... <p class="p3">Hello Casecading style sheet......it sis used to design the webpages atractively ..</p></div>
+    <div class="none">None Display....<p class="p4">Hello JavaScript.....it is a </p></div>
+    <div class="inline">Inline Display......<p class="p5"> hello World.....welcome to the webpages in display a elament in different way </p></div>
+    <div class="block">Block Display....<p class="p6">Welcome to Display block Pages </p></div>
+    <div class="contents">Contents Display...<p class="p7">This is Contents display pages is used to</p></div>
+    <div class="list-item">List Item Display...<p class="p8">welcome to my pages</p></div>
+
+
+    <div class="padd">
+        <div class="box">Default padding and margin</div>
+        <div class="small">Small padding and margin</div>
+        <div class="large">Large padding and margin</div>
+    </div>
+
+    <!-- <img src="dogs.jpg"> -->
+    <h1>multiple Background images </h1>
+<section id="img">
+    </section>  
+
+    <div  class="scroll">
+        <a href="#top">Click to go to top of page</a>
+    <a href="#bottom">Click to go to bottom of page</a>
+    <!-- Placeholder elements to demonstrate scrolling -->
+    <div style="height: 1500px;"></div>
+    <div id="top"></div>
+    <div style="height: 1500px;"></div>
+    <div id="bottom"></div>
+    </div>
+</body>
+</html>

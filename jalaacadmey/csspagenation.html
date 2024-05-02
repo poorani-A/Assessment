@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Effect and Hover Cursor</title>
+    <style>
+
+        /* 1.Applying CSS shadow effects and hover effects: */
+        .image-box {
+            width: 300px;
+            height: 400px;
+            background-image: url('puppy.jpg');
+            background-size: cover;
+            box-shadow: 5px 5px 10px rgba(135, 86, 86, 0.5);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .image-box:hover {
+            box-shadow: 10px 10px 20px rgba(217, 100, 28, 0.7);
+        }
+        /*2. Using CSS animations and paginations: */
+
+        /* CSS Animation */
+        @keyframes slidein {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animation {
+            animation-name: slidein;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            animation-delay: 1s;
+            color: blueviolet;
+        }
+
+        /* CSS Pagination */
+        .pagination {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pagination li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .pagination a {
+            display: block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+       
+        /* Adding positions to CSS block: */
+        .static {
+            position: static;
+            margin: 20px;
+            background-color: green;
+            padding: 30px;
+
+        }
+        .relative {
+            position: relative;
+            background-color: pink;
+            top: 50px;
+            left: 50px;
+            margin: 10px;
+            padding: 20px;
+        }
+        .fixed {
+            position: fixed;
+            background-color: #cc2394;
+            top: 100px;
+            right: 50px;
+            margin: 20px;
+            padding: 30px;
+        }
+        .absolute {
+            position: absolute;
+            background-color: red;
+            bottom:20rem;
+            left: 30rem;
+            margin-bottom:50px;
+            padding:30px;
+        }
+        .sticky {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: yellow;
+            padding: 10px;
+            margin: 60px;
+        }
+        .content {
+            height: 1500px;
+            background-color: #b7f897;
+            margin-top: 50px;
+        }
+         
+        /* Handling Overflow using scroll: */
+        .container {
+            width: 300px;
+            height: 200px;
+            overflow: scroll;
+            border: 2px solid #111010;
+            background-color: aqua;
+        }
+        .content1 {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(246, 166, 74);
+        } 
+
+        .opcity {
+            opacity: 0.6;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!--Applying CSS shadow effects and hover effects  -->
+    <section id="page1">
+    
+    <div class="image-box"></div>
+    
+</section>
+    <!-- Using CSS animations and paginations -->
+    <div class="animation">
+        <h1>This element animates using CSS </h1>
+       
+        </div>
+
+    <ul class="pagination">
+        <li><a href="CssBasic.html">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+    <!--3. Adding positions to CSS block: -->
+    <div class="content">
+        <h1>This elements in used for css properties</h1>
+        <div class="static">Static Position</div>
+        <div class="relative">Relative Position</div>
+        <div class="fixed">Fixed Position</div>
+        <div class="absolute">Absolute Position</div>
+        <div class="sticky">Sticky Position</div>
+    </div>
+
+    <!--4. Handling Overflow using scroll: -->
+    <div class="container">
+
+        <h1> hello world ......welcome to our page..</h1>
+        <div class="content1"></div>
+
+       <h1> handling overflow using scroll properties....</h1>
+    </div>
+
+    <div class="opcity">
+        <h1> his property is used for opacity</h1>
+
+        <img src="nature.jpg" alt="Image">
+    </div>
+
+
+</body>
+</html>

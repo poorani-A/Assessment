@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<style>
+    #btn{
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px;
+        font-size: 20px;
+        background-color: aquamarine;
+    }
+
+    #sp1{
+        font-size: 25px;
+        color: blueviolet;
+        text-shadow:3px red ;
+    }
+    .frm1{
+        padding: 10px;
+    }
+    input{
+        padding: 10px;
+    }
+
+    
+</style>
+<body>
+    <button id="btn">Click to display date and time</button>
+
+    <form class="frm1" onsubmit="return validateForm()">
+        <input type="text" id="textbox" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Get Cookie</button>
+    <button onclick="checkCookie()">Check Cookie</button>
+    <br><br>
+    <span id="sp1"></span>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            var currentDate = new Date();
+            console.log(currentDate)
+            // alert('Current date and time: ' + currentDate);
+
+            document.getElementById("sp1").innerText=(`show me the current date and time${currentDate}`);
+
+        });
+    
+        function validateForm() {
+            var textboxValue = document.getElementById('textbox').value;
+            if (textboxValue.trim() === '') {
+                alert('Text box cannot be empty');
+                return false;
+            }
+            return true;
+        }
+
+        var a = 10;
+        var b = 10;
+        console.log('Value of a:', a);
+        console.log('Value of b:', b);
+        
+        var sum = a + b;
+        console.log('Sum of a and b:', sum);
+
+        document.write(sum);
+
+      //
+        function setCookie() {
+            document.cookie = "username=John Doe";
+            console.log('Cookie set successfully');
+        }
+
+        function getCookie() {
+            var cookies = document.cookie;
+            console.log('Cookies:', cookies);
+        }
+
+        //5.Creating a JSON object and accessing it using dot notation:
+        function checkCookie() {
+            var username = getCookie('username');
+            if (username !== '') {
+                console.log('Cookie exists with username:', username);
+            } else {
+                console.log('Cookie does not exist');
+            }
+        }
+
+        var person = {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 30,
+            "city": "New York"
+        };
+
+        console.log('First Name:', person.firstName);
+        console.log('Last Name:', person.lastName);
+        console.log('Age:', person.age);
+        console.log('City:', person.city);
+
+        
+
+
+   
+    </script>
+</body>
+</html>
